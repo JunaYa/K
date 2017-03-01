@@ -11,27 +11,27 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
+            debuggable false
+            minifyEnabled false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
 
     lintOptions {
-        disable 'MissingTranslation', 'ExtraTranslation'
-    }
-
-    lintOptions {
         abortOnError false
-    }
-
-    lintOptions {
-        disable "InvalidPackage"
-        lintConfig file("lint.xml")
     }
 
     compileOptions {
@@ -43,7 +43,7 @@ android {
 
 dependencies {
     def supportVersion = '25.2.0'
-    def butterKnifeVersion = '25.2.0'
+    def butterKnifeVersion = '8.5.1'
 
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
