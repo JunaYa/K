@@ -1,13 +1,18 @@
 package me.github.k;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import me.github.k.base.BaseActivity;
+
+public class MainActivity extends BaseActivity {
+
+    @Override
+    protected int layoutResId() {
+        return R.layout.activity_main;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
     }
 }
