@@ -57,8 +57,4 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void initView(View view);
 
     protected abstract void initEvents();
-
-    protected void setToolBar(Toolbar toolBar){
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolBar);
-    }
 }

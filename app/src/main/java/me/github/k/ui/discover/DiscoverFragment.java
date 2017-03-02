@@ -1,4 +1,4 @@
-package me.github.k.ui.fragment;
+package me.github.k.ui.discover;
 
 import android.view.View;
 

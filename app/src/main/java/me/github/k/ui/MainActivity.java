@@ -1,4 +1,4 @@
-package me.github.k.ui.activity;
+package me.github.k.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,8 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
 
@@ -16,12 +16,14 @@ import butterknife.BindView;
 import io.fabric.sdk.android.Fabric;
 import me.github.k.R;
 import me.github.k.base.BaseActivity;
-import me.github.k.ui.fragment.DiscoverFragment;
-import me.github.k.ui.fragment.HomeFragment;
-import me.github.k.ui.fragment.MineFragment;
+import me.github.k.ui.discover.DiscoverFragment;
+import me.github.k.ui.home.HomeFragment;
+import me.github.k.ui.mine.MineFragment;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
 
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
     @BindView(R.id.navigation)
     BottomNavigationView mBottomNavigationView;
     @BindView(R.id.view_pager)
@@ -36,6 +38,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
+        setSupportActionBar(mToolbar);
     }
 
     @Override

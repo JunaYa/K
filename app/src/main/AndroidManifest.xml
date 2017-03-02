@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -22,10 +22,6 @@
             android:name="io.fabric.ApiKey"
             android:value="5d8872e3ed3a9bccddbb76e9da80005c3992f65a"/>
 
-        <activity
-            android:name=".ui.activity.Main2Activity"
-            android:label="@string/title_activity_main2">
-        </activity>
     </application>
 
 </manifest>

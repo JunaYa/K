@@ -1,4 +1,4 @@
-package me.github.k.ui.fragment;
+package me.github.k.ui.mine;
 
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -10,9 +10,6 @@ import me.github.k.base.BaseFragment;
 
 
 public class MineFragment extends BaseFragment {
-
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
 
     public static MineFragment newInstance(){
         MineFragment mineFragment = new MineFragment();
@@ -26,7 +23,6 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void initView(View view) {
-       setToolBar(mToolbar);
     }
 
     @Override
