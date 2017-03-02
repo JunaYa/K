@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="me.github.k">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,10 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="5d8872e3ed3a9bccddbb76e9da80005c3992f65a" />
+            android:value="5d8872e3ed3a9bccddbb76e9da80005c3992f65a"/>
+
+        <activity
+            android:name=".ui.activity.Main2Activity"
+            android:label="@string/title_activity_main2">
+        </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
