@@ -22,11 +22,9 @@ import me.github.k.ui.mine.MineFragment;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
 
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
     @BindView(R.id.navigation)
     BottomNavigationView mBottomNavigationView;
-    @BindView(R.id.view_pager)
+    @BindView(R.id.view_pager_container)
     ViewPager mViewPager;
 
     @Override
@@ -38,13 +36,13 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
-        setSupportActionBar(mToolbar);
     }
 
     @Override
     protected void initEvents() {
         mViewPager.setAdapter(new Adapter(getSupportFragmentManager()));
         mViewPager.addOnPageChangeListener(this);
+        mViewPager.setOffscreenPageLimit(3);
         mBottomNavigationView.setOnNavigationItemSelectedListener(this);
     }
 
@@ -100,4 +98,5 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
             return mFragments[position];
         }
     }
+
 }

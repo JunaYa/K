@@ -1,17 +1,17 @@
 package me.github.k.ui.mine;
 
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-import butterknife.BindView;
 import me.github.k.R;
-import me.github.k.base.BaseFragment;
+import me.github.k.base.BaseToolbarFragment;
 
 
-public class MineFragment extends BaseFragment {
+public class MineFragment extends BaseToolbarFragment {
 
-    public static MineFragment newInstance(){
+    private static final String TAG = MineFragment.class.getSimpleName();
+
+    public static MineFragment newInstance() {
         MineFragment mineFragment = new MineFragment();
         return mineFragment;
     }
@@ -23,6 +23,7 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void initView(View view) {
+        setToolbarTitle(TAG);
     }
 
     @Override
