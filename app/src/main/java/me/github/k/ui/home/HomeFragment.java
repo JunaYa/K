@@ -48,8 +48,8 @@ public class HomeFragment extends BaseToolbarFragment {
         adapter.setGanks(25);
 
 
-        initToolbar();
-        setToolbarTitle(TAG);
+//        initToolbar();
+//        setToolbarTitle(TAG);
 
 
     }

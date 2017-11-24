@@ -22,7 +22,7 @@ public class DiscoverFragment extends BaseToolbarFragment {
 
     @Override
     protected void initView(View view) {
-        setToolbarTitle(TAG);
+//        setToolbarTitle(TAG);
     }
 
     @Override
